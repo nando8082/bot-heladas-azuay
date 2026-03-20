@@ -24,7 +24,7 @@ APPS = [
         "color": "#059669",
     },
     {
-        "nombre": "Proyección de temperatura mínima nocturna susceptibilidad a heladas para el año 2030",
+        "nombre": "Susceptibilidad a heladas para el año 2030",
         "descripcion": "Visualizador predictivo de heladas para análisis prospectivo en Azuay.",
         "url": "https://azuay-temperatura.projects.earthengine.app/view/tendencia2030",
         "categoria": "Machine Learning",
