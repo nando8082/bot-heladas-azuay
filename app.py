@@ -32,7 +32,7 @@ APPS = [
     },
 ]
 
-BOT_URL = "https://bot-heladas-azuay-vathpuo4sxccayxt3fzp2t.streamlit.app/"
+BOT_URL = "https://bot-heladas-azuay-7vqckud6x8ve7jvsgakm3x.streamlit.app/"
 
 st.markdown(
     """
