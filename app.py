@@ -180,7 +180,7 @@ div[data-testid="stHeading"] h3 {
 st.markdown(
     """
 <div class="hero-box">
-    <div class="hero-title">Portal Profesional de Visualización</div>
+    <div class="hero-title">Frost + IQ: Sistema de Monitoreo y Predicción de Heladas</div>
     <div class="hero-subtitle">
         Plataforma para centralizar visores geoespaciales, modelos predictivos y herramientas analíticas.
     </div>
