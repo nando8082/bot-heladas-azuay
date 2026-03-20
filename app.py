@@ -1,8 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-
-
 st.set_page_config(
     page_title="Portal de Visualización",
     page_icon="🌎",
@@ -33,6 +31,8 @@ APPS = [
         "color": "#7C3AED",
     },
 ]
+
+BOT_URL = "https://bot-heladas-azuay-vathpuo4sxccayxt3fzp2t.streamlit.app/"
 
 st.markdown(
     """
@@ -108,6 +108,26 @@ header {visibility: hidden;}
     line-height: 1.5;
 }
 
+/* Caja del bot */
+.bot-card {
+    background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 1.2rem;
+    box-shadow: 0 12px 30px rgba(15,23,42,0.18);
+    margin-bottom: 1rem;
+}
+.bot-card-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 0.45rem;
+}
+.bot-card-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.95;
+}
+
 /* Visor */
 .viewer-box {
     background: white;
@@ -117,11 +137,7 @@ header {visibility: hidden;}
     border: 1px solid rgba(148,163,184,0.16);
 }
 
-/* =========
-   Corrección de colores en controles Streamlit
-   ========= */
-
-/* Labels de campos */
+/* Corrección de colores en controles Streamlit */
 div[data-testid="stSelectbox"] label,
 div[data-testid="stRadio"] label,
 div[data-testid="stSelectbox"] p,
@@ -130,32 +146,28 @@ div[data-testid="stRadio"] p {
     font-weight: 600;
 }
 
-/* Texto seleccionado del selectbox */
 div[data-testid="stSelectbox"] div[data-baseweb="select"] > div {
     color: #0f172a !important;
     background-color: white !important;
 }
 
-/* Texto interno del selectbox */
 div[data-testid="stSelectbox"] span,
 div[data-testid="stSelectbox"] input,
 div[data-testid="stSelectbox"] div {
     color: #0f172a !important;
 }
 
-/* Opciones del radio */
 div[role="radiogroup"] label,
 div[role="radiogroup"] label p,
 div[role="radiogroup"] label div {
     color: #0f172a !important;
 }
 
-/* Subheader del visor */
 div[data-testid="stHeading"] h3 {
     color: #0f172a !important;
 }
 
-/* Botones */
+/* Botones Streamlit */
 .stLinkButton a {
     border-radius: 12px !important;
     font-weight: 600 !important;
@@ -215,9 +227,27 @@ with col1:
     )
 
     st.link_button(
-        "Abrir en nueva pestaña",
+        "Abrir visualizador en nueva pestaña",
         app_actual["url"],
-        use_container_width=True,
+        width="stretch",
+    )
+
+    st.markdown(
+        """
+        <div class="bot-card">
+            <div class="bot-card-title">Asistente de Heladas</div>
+            <div class="bot-card-text">
+                Acceda al bot para consultar riesgo de heladas y susceptibilidad por cantón.
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    st.link_button(
+        "💬 Abrir bot en nueva pestaña",
+        BOT_URL,
+        width="stretch",
     )
 
 with col2:
@@ -237,6 +267,6 @@ with col2:
         """
         components.html(iframe_html, height=altura_iframe + 20, scrolling=True)
     else:
-        st.link_button("Ir al visor", app_actual["url"], use_container_width=True)
+        st.link_button("Ir al visor", app_actual["url"], width="stretch")
 
     st.markdown("</div>", unsafe_allow_html=True)
