@@ -10,7 +10,7 @@ st.set_page_config(
 
 APPS = [
     {
-        "nombre": "Visor de Heladas",
+        "nombre": "Proyección de temperatura mínima nocturna",
         "descripcion": "Visualización interactiva de zonas con riesgo de heladas en Google Earth Engine.",
         "url": "https://entrenamiento-490300.projects.earthengine.app/view/heladas",
         "categoria": "Geoespacial",
@@ -24,7 +24,7 @@ APPS = [
         "color": "#059669",
     },
     {
-        "nombre": "Proyección de temperatura mínima nocturna",
+        "nombre": "Proyección de temperatura mínima nocturna susceptibilidad a heladas para el año 2030",
         "descripcion": "Visualizador predictivo de heladas para análisis prospectivo en Azuay.",
         "url": "https://azuay-temperatura.projects.earthengine.app/view/tendencia2030",
         "categoria": "Machine Learning",
